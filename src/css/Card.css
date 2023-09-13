@@ -1,0 +1,36 @@
+.card{
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+.title{
+    font-size: 20px;
+    font-weight: 200;
+ }
+.img{
+    margin-top: 10px;
+    width: 100%;
+    object-fit: fill;
+}
+
+.desc{
+    margin-top: 10px;
+    line-height: 1.3;
+  
+}
+.cardButton{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(176, 29, 176);
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+    
+}
+.link{
+    color: inherit;
+    text-decoration: none;
+}
