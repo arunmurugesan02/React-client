@@ -1,13 +1,18 @@
-import React from 'react'
-import {posts} from '../data'
-import Card from '../components/Card'
-import "../css/Home.css"
-const Home = () => {
-  return (
-    <div className='home'>{posts.map(posts =>(
-        <Card key={posts.id} posts={posts}/>
-    ))}</div>
-  )
-}
+import React from "react";
+import Card from "../components/Card";
+import "../css/Home.css";
 
-export default Home
+const Home = ({ data }) => {
+  console.log(data);
+  return (
+    <div className="home">
+     {
+      data.map((item) =>(
+        <Card item={item} />
+      ))
+     }
+    </div>
+  );
+};
+
+export default Home;

@@ -1,17 +1,17 @@
-import React from 'react'
-import '../css/Card.css'
-import { Link } from 'react-router-dom'
-const Card = ({posts}) => {
+import React from 'react';
+import '../css/Card.css';
+import { Link } from 'react-router-dom';
+
+const Card = ({ item }) => {
   return (
     <div className='card'>
-        <Link  className="link"to={`/post/${posts.id}`}>
-        <span className='title'>{posts.title}</span>
-        <img src={posts.img} alt=""  className='img'/>
-        <p className='desc'>{posts.desc}</p>
-        <button className='cardButton'>Read More</button>
-        </Link>
+      <Link className="link" to={`/post/${item.id}`}>
+        <span className='title'>{item.author}</span>
+        <img src={item.urlToImage} alt="" className='img' />
+        <p className='desc'>{item.description}</p>
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
