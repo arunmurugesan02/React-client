@@ -1,6 +1,32 @@
-.home{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 50px 100px;
-    gap: 30px;
+.main {
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 250px;
+  margin-left: 25rem;
+  margin-top: 10rem;
+  gap: 10px;
+}
+.news {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 20px 20px;
+  cursor: pointer;
+}
+.calendar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px 20px;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
 }

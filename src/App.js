@@ -5,7 +5,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Post from "./pages/Post";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import NewsItem from "./pages/NewsItem";
+import NewsItem from "./pages/NewsList";
+import CategoryList from "./pages/CategoryList";
 
 function App() {
   const [user,setUser] = useState(null)
@@ -36,15 +37,27 @@ function App() {
       <div className="App">
         <Navbar user={user} />
         <Routes>
-          <Route path="/" element={<NewsItem />} />
+          <Route path="/" element={<Home  user={user}/>} />
           <Route
             path="/login"
-            element={user ? <Navigate to="/" /> : <Login />}
+            element={user ? <Navigate to="/news/home" /> : <Login />}
           />
-          <Route
-            path="/post/:id"
-            element={user ? <Post /> : <Navigate to="/login" />}
-          />
+         
+           <Route path="/news/post/:id" element={user ?<Post /> : <Navigate to='/login' />} />
+
+          {/* <Route
+            path="/news/home"
+            element={user ? <NewsItem /> : <Navigate to="/login" />}
+          /> */}
+          <Route path="/news/home" element={<NewsItem />} />
+          <Route path="/news/science" element={<CategoryList  category={'science'}  />} />
+          <Route path="/news/sports" element={<CategoryList category={'sports'} />} />
+          <Route path="/news/technology" element={<CategoryList category={'technology'}/>} />
+          <Route path="/news/entertainment" element={<CategoryList category={'entertainment'}/>} />   
+
+           
+
+
         </Routes>
       </div>
     </BrowserRouter>

@@ -1,0 +1,9 @@
+.Category{
+    display: flex;
+        flex-wrap: wrap;
+    padding-top: 70px;
+    padding-left: 70px;
+    gap: 20px;
+
+    
+}   

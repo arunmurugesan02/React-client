@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.newsheader {
+  padding-top: 70px;
+  background-color: rgb(224, 72, 72);
+  color: white;
+  padding-left: 20px;
+  height: 9.2rem;
+  cursor: pointer;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.newsTitle {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.listElements {
+  list-style: none;
+  display: flex;
+  font-weight: 700;
+  margin-top: 10px;
+  padding-right: 20px;
+  gap: 30px;
+}
+
+.navline {
+  font-weight: 900;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  padding: 10px 0px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Styling for the active link */
+.active-link .navline {
+  text-decoration: underline;
+  color: blue; /* Change the color of the active link text */
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #031d44;
+}
+
+.nav-link::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}

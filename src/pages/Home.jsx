@@ -1,17 +1,25 @@
 import React from "react";
-import Card from "../components/Card";
 import "../css/Home.css";
+import newsLogo from "../Images/news.jpeg";
+import { Link } from "react-router-dom";
 
-const Home = ({ data }) => {
-  console.log(data);
+
+const Home = ({ user }) => {
+  console.log(user);
   return (
-    <div className="home">
-     {
-      data.map((item) =>(
-        <Card item={item} />
-      ))
-     }
-    </div>
+    <>
+      <div className="main">
+        <div className="container">
+          <div className="news">
+            
+            <Link to="/news/home" style={{ textDecoration: "none" }}>
+              <img src={newsLogo} alt="" className="images" />
+              <h1 className="title">News</h1>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

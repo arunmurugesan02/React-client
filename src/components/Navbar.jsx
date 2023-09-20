@@ -9,8 +9,8 @@ const Navbar = ({ user }) => {
     <div className="navbar">
       <span className="logo">
         <Link to="/" className="logo">
-          <div className="arun">Arun</div>
-          <div className="app">News</div>
+          <div className="arun">Social</div>
+          <div className="app">Networks</div>
         </Link>
       </span>
       {user ? (
